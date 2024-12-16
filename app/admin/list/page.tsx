@@ -2,7 +2,7 @@
 import React from "react";
 import { useQuery } from "@tanstack/react-query";
 
-export const getList = async () => {
+const getList = async () => {
   const res = await fetch(
     "https://jsonplaceholder.typicode.com/users?_limit=6"
   );
@@ -31,7 +31,6 @@ export default function ListPage() {
   return (
     <div className="w-full">
       <h2 className="font-semibold capitalize">List</h2>
-
       <table className="w-full table-auto  ">
         <thead className="text-left">
           <tr>
